@@ -17,6 +17,7 @@
     margin: 0 auto;
     margin-top: 40px;
     max-width: 560px;
+    min-width: 300px;
 
 }
 form{
@@ -85,4 +86,8 @@ center img{
 .search__buttonsBox p{
    font-size: 12px;
    
+}
+
+.search__buttonsHidden{
+    display: none !important;
 }

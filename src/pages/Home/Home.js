@@ -7,7 +7,9 @@ import { google } from '../../assets';
 import {Search} from '../../components';
 
 const Home = () => {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
+
+  console.log(setUser);
   return (
     <div className='home'>
       <div className="home__header">
@@ -17,8 +19,8 @@ const Home = () => {
 
 </div> */}
 <div className="home__headerRight">
-<Link to='/gmail'>Gmail</Link>
-<Link to='/images'>Images</Link>
+<Link to='https://mail.google.com/'>Gmail</Link>
+<Link to='https://www.google.cm/imghp?hl=en&tab=ri&ogbl'>Images</Link>
 <AppsIcon/>
 {
   user && <Avatar src=''/>
@@ -29,7 +31,7 @@ const Home = () => {
 <img src={google} alt="" />
 {/* <h1 className='home__title'>Google</h1> */}
 <div className="home__inputContainer">
- <Search/>
+ <Search hideButtons/>
 </div>
       </div>
     </div>
