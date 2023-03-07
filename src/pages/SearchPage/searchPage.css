@@ -1,0 +1,54 @@
+.searchPage{
+    height: 100vh;
+}
+
+.searchPage__header{
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 0 20px; 
+  border: 1px solid red;
+}
+.searchPage__headerLeft{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border: 1px solid rgb(0, 17, 255);
+    padding: 0 20px; 
+    
+}
+.searchPage__headerLeft :last-child{
+align-self: center;
+}
+.searchPage__headerRight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    color: #ffff;
+    
+}
+ .MuiSvgIcon-root{ 
+    /* padding: 20px; */
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+} 
+ .MuiSvgIcon-root:hover{ 
+    background: rgba(148, 142, 142, 0.3);
+  
+} 
+.searchPage__headerRight > .MuiButton-root a{ 
+    color: #ffff;
+    text-decoration: none;
+    
+}
+
+.searchPage__header img{
+width: 100px;
+height: 100px;
+object-fit: contain;
+}
+.MuiButton-root
+.Mui-focusVisible{}

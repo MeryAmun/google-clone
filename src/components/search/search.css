@@ -49,9 +49,19 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin: 30px 0px;
 }
-.search__buttonsBox{
+
+.search__buttons > .MuiButton-root{
+    color: white;
+    border: 1px solid #757575;
+    margin-right: 20px;
+
+}
+.search__buttons > .MuiButton-root .Mui-focusVisible{
+    color:  #757575;
+}
+/* .search__buttonsBox{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -86,7 +96,7 @@ center img{
 .search__buttonsBox p{
    font-size: 12px;
    
-}
+} */
 
 .search__buttonsHidden{
     display: none !important;

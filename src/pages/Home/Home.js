@@ -31,7 +31,7 @@ const Home = () => {
 <img src={google} alt="" />
 {/* <h1 className='home__title'>Google</h1> */}
 <div className="home__inputContainer">
- <Search hideButtons/>
+ <Search/>
 </div>
       </div>
     </div>

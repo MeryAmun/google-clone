@@ -3,16 +3,25 @@ import "./search.css";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import AddIcon from "@mui/icons-material/Add";
+import Button from '@mui/material/Button'
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useNavigate } from "react-router-dom";
 import { chrome } from "../../assets";
+import { useStateDataValue } from '../../context/DataLayerContext';
+import * as actionType from '../../constants/actionTypes'
 
 const Search = ({ hideButtons = false }) => {
+const [{}, dispatch] = useStateDataValue();
   const [input, setInput] = useState("");
   const navigate = useNavigate();
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(input);
+    dispatch({
+      type:actionType.SET_SEARCH_TERM,
+      term:input
+    })
     setInput("");
     navigate("/search");
   };
@@ -34,33 +43,13 @@ const Search = ({ hideButtons = false }) => {
       {
         !hideButtons ? (
           <div className="search__buttons">
-        <div className="search__buttonsBox">
-          <center>
-            <img src={chrome} alt="" />
-          </center>
-          <p>Extensions</p>
-        </div>
-        <div className="search__buttonsBox">
-          <center className="addIcon">
-            <AddIcon />
-          </center>
-          <p>Add Shortcut</p>
-        </div>
+        <Button variant="outlined" type='submit'>Google Search</Button>
+        <Button variant="outlined">I'm Feeling Lucky</Button>
       </div>
         ) : (
           <div className="search__buttons search__buttonsHidden">
-        <div className="search__buttonsBox">
-          <center>
-            <img src={chrome} alt="" />
-          </center>
-          <p>Extensions</p>
-        </div>
-        <div className="search__buttonsBox">
-          <center className="addIcon">
-            <AddIcon />
-          </center>
-          <p>Add Shortcut</p>
-        </div>
+        <Button variant="outlined" type='submit'>Google Search</Button>
+        <Button variant="outlined">I'm Feeling Lucky</Button>
       </div>
         )
       }
