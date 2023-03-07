@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./search.css";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
@@ -7,12 +7,22 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { chrome } from "../../assets";
 
 const Search = () => {
+  const [input, setInput] = useState('');
+const handleSubmit = (e) => {
+  e.preventDefault()
+}
+
   return (
     <div className="search">
       <div className="search__input">
         <SearchIcon className="search__inputIcon" />
-        <input type="text" placeholder="Search Google or type a URL" />
-        <MicIcon className="realbox-icon-button" />
+       <form onSubmit={handleSubmit}>
+       <input type="text"
+       value={input}
+       placeholder="Search Google or type a URL"
+       onChange={(e) => setInput(e.target.value)} />
+       </form>
+        <MicIcon className="search__micIcon" id="voiceSearchButton"/>
       </div>
       <div className="search__buttons">
       <div className="search__buttonsBox">

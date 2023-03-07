@@ -3,14 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 .search__input{
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 50px;
     width: 45vw;
-    padding: 20px 30px;
+    padding: 20px 40px;
     border-radius: 999px;
     background-color: #ffff;
     margin: 0 auto;
@@ -18,18 +19,29 @@
     max-width: 560px;
 
 }
+form{
+    flex: 1;
+    height: 50px;
+}
 .search__input input{
    border: none;
    outline: none;
-  flex: 1;
+   height: 50px;
+   width: 100%;
    padding: 10px 20px;
+   font-size: 20px;
 
 }
+.search__input input::placeholder{
+ font-size: 20px;
+}
 
+.search__micIcon,
 .search__inputIcon{
     color: gray;
     cursor: pointer;
 }
+
 
 .search__buttons{
     width: 45vw;
@@ -54,18 +66,18 @@
     cursor: pointer;
 }
 .search__buttonsBox center{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: rgba(148, 142, 142, 0.3);
     border-radius: 50%;
     cursor: pointer;
 }
 center img{
-    padding-top: 15px;
+    padding-top: 10px;
     margin-bottom: 10px;
 }
 .addIcon{
-    padding-top: 18px;
+    padding-top: 13px;
     margin-bottom: 10px;
 }
 
