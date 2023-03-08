@@ -9,7 +9,7 @@
 .search img{
     margin-top: 0;
     padding: 0;
-    margin-top: -3rem;
+    /* margin-top: -3rem; */
 }
 .search__input{
     display: flex;
@@ -19,7 +19,7 @@
     /* padding: 20px 30px; */
     border-radius: 29px;
     background-color: #ffff;
-    margin-top: -2.3rem;
+    margin-top: 2.3rem;
     max-width: 560px;
     min-width: 300px;
     background-color: #292a2d;
@@ -104,6 +104,15 @@
 .search__language span{
     color: #8Ab4F8;
     cursor: pointer;
+}
+
+.MuiTooltip-popper .MuiTooltip-tooltip{
+    background-color: #292a2d;
+    height: 30px;
+    text-align: center;
+    padding-top: 8px;
+    border: 1px solid #5f6368;
+    color: #e8eaed;   
 }
 @media (max-width:768px) {
     .footer__links{
