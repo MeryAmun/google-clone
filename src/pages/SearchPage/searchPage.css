@@ -1,5 +1,6 @@
 .searchPage{
     height: 100vh;
+    padding: 20px;
 }
 
 .searchPage__header{
@@ -9,11 +10,12 @@
   align-items: center; 
   padding: 0 20px; 
   border: 1px solid red;
+  /* margin: 1rem 2rem; */
 }
 .searchPage__headerLeft{
     width: 60%;
+    height: 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center; 
     border: 1px solid rgb(0, 17, 255);
     padding: 0 20px; 
@@ -26,14 +28,18 @@ align-self: center;
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    color: #ffff;
-    
+    color: #ffff;  
+}
+.search__pageSearch{
+    margin-top: 48px;
+    margin-left: 2rem;
 }
  .MuiSvgIcon-root{ 
     /* padding: 20px; */
     margin-right: 20px;
     cursor: pointer;
     border-radius: 100%;
+    color: #ffff;
 } 
  .MuiSvgIcon-root:hover{ 
     background: rgba(148, 142, 142, 0.3);

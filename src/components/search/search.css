@@ -3,49 +3,81 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding-bottom: 10px;
 }
 
+.search img{
+    margin-top: 0;
+    padding: 0;
+    margin-top: -3rem;
+}
 .search__input{
     display: flex;
     align-items: center;
-    height: 50px;
-    width: 45vw;
-    padding: 20px 40px;
-    border-radius: 999px;
+    height: 45px;
+    width: 100%;
+    /* padding: 20px 30px; */
+    border-radius: 29px;
     background-color: #ffff;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin-top: -2.3rem;
     max-width: 560px;
     min-width: 300px;
+    background-color: #292a2d;
+   border: 1px solid #5f6368;
 
 }
-form{
+/* form{
     flex: 1;
-    height: 50px;
-}
+    height: 45px;
+    width: 50vw;
+    
+} */
+
 .search__input input{
    border: none;
    outline: none;
-   height: 50px;
-   width: 100%;
-   padding: 10px 20px;
+ width: 100%;
+   
+   /* padding: 10px 20px; */
    font-size: 20px;
+   background-color: #292a2d;
+   color: #ffff;
+   
 
 }
 .search__input input::placeholder{
- font-size: 20px;
+ font-size: 18px;
 }
 
-.search__micIcon,
+/* .search__micIcon,
 .search__inputIcon{
     color: gray;
     cursor: pointer;
+} */
+.MuiSvgIcon-root{
+    color:  #5f6368;
+  background-color: none;
+}
+.MuiSvgIcon-root:hover{
+  background-color: none;
+  border: none;
+}
+.search__inputVerticalRule{
+    width: 0;
+    height: 30px;
+    border: 1px solid #5f6368;
 }
 
-
+.search__inputFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
 .search__buttons{
-    width: 45vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,14 +85,51 @@ form{
 }
 
 .search__buttons > .MuiButton-root{
-    color: white;
-    border: 1px solid #757575;
+    background-color: #303134;
+    color: #e8eaed;
+    height: 50px;
+    /* border: 1px solid #757575; */
+    border: none;
     margin-right: 20px;
+    text-transform: none;
 
 }
-.search__buttons > .MuiButton-root .Mui-focusVisible{
-    color:  #757575;
+.search__buttons > .MuiButton-outlinedPrimary {
+    outline-color:  #757575;
 }
+
+.search__language p{
+    color: #BDC1C6;
+}
+.search__language span{
+    color: #8Ab4F8;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    .footer__links{
+flex-direction: column;
+width: 100%;
+    }
+    .footer__leftLinks{
+        width: 100%;
+
+    }
+}
+
+svg{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.Gdd5U{
+    margin-right: 10px;
+}
+/* http://www.w3.org/2000/svg; */
+/* .search__micIcon{
+    color: 
+} */
 /* .search__buttonsBox{
     display:flex;
     flex-direction: column;

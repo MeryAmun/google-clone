@@ -1,13 +1,16 @@
 .home{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 83vh;
+    overflow: hidden;
 }
+
 .home__header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px 30px;
+    padding: 10px 20px;
 }
 .home__header  a{
   margin-right: 20px;
@@ -45,6 +48,7 @@
    width: 30px;
    height: 30px;
    margin-right: 20px;
+   color: #ffff;
    /* padding: 20px; */
 }
 .home__headerRight > .MuiAvatar-root{
@@ -82,7 +86,13 @@
 
 
 .home__inputContainer{
-margin-top: -80px;
+margin-top: 0px;
 padding: 0;
+border: 1px solid greenyellow;
+width: 100%;
 
+}
+
+.MuiButton-root > a:hover {
+    text-decoration: none;
 }

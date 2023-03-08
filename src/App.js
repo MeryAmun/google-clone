@@ -6,8 +6,6 @@ import { Footer } from './components';
 function App() {
   return (
     <div className="app">
-      google
-
     <Routes>
       <Route exact path='/' element={<Home/>}/>
       <Route exact path='/search' element={<SearchPage/>}/>

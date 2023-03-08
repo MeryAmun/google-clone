@@ -15,12 +15,14 @@ const SearchPage = () => {
     <div className='searchPage'>
      <div className="searchPage__header">
    <div className="searchPage__headerLeft">
-   <Tooltip title='Go to Google Home'>
+   <Tooltip title='Go to Google Home' disableInteractive>
  <Link to='/'>
  <img src={google} alt="" />
  </Link>
   </Tooltip>
-   <Search hideButtons/>
+ <div className="search__pageSearch">
+ <Search hideButtons/>
+ </div>
    </div>
    <div className="searchPage__headerRight">
    <Tooltip title="Quick Settings" disableInteractive>
