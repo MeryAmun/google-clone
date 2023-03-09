@@ -5,6 +5,7 @@
     background: rgb(23, 23, 23);
     height: 100%;
     padding-bottom: 20px;
+    margin-bottom: 0;
 }
 .footer__location{
     margin: 10px;
@@ -43,6 +44,11 @@ align-items: center;
 }
 
 @media (max-width:768px) {
+    .footer{
+        height: 17vh;
+        margin-bottom: 0;
+        overflow-y: hidden;
+    }
     .footer__links{
 flex-direction: column;
 width: 100%;

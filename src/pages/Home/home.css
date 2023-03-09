@@ -69,6 +69,16 @@
    cursor: pointer;
  
 }
+
+.home__headerRight > .MuiButton-root{
+    background-color: #8AB4F8;
+    text-transform: none;
+}
+.home__headerRight > .MuiButton-root:hover{
+    background-color: #8AB4F8;
+   opacity: 0.9;
+    
+}
 .home__body > img{
     object-fit: contain;
     width: 100%;

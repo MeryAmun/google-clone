@@ -1,6 +1,7 @@
 .searchPage{
-    height: 100vh;
-    padding: 20px;
+    height: 83vh;
+    padding: 20px 0;
+    overflow-x: hidden;
 }
 
 .searchPage__header{
@@ -53,7 +54,7 @@ align-self: center;
     align-items: center;
     height: 45px;
     width: 100%;
-    /* padding: 20px 30px; */
+    padding-left: 10px;
     border-radius: 29px;
     background-color: #ffff;
     margin-top: -2.3rem;
@@ -120,5 +121,20 @@ svg{
     color: #e8eaed;   
 }
 
-.MuiButton-root
+.searchPage__headerRight > .MuiButton-root{
+    background-color: #8AB4F8;
+    text-transform: none;
+}
+.searchPage__headerRight > .MuiButton-root:hover{
+    background-color: #8AB4F8;
+   opacity: 0.9;
+    
+}
+
+.searchPage hr{
+    border: 1px solid #5f6368;
+    width: 100%;
+ 
+}
+
 .Mui-focusVisible{}

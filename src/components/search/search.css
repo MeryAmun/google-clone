@@ -6,6 +6,7 @@
     padding-bottom: 10px;
 }
 
+
 .search img{
     margin-top: 0;
     padding: 0;
@@ -87,12 +88,18 @@
 .search__buttons > .MuiButton-root{
     background-color: #303134;
     color: #e8eaed;
-    height: 50px;
-    /* border: 1px solid #757575; */
-    border: none;
-    margin-right: 20px;
+    border: 1px solid #303134;
+    font-size: 14px;
+    height: 36px;
+    min-width: 54px;
+    margin: 11px 4px;
+    padding: 0px 16px;
     text-transform: none;
+    background: fixed;
 
+}
+.search__buttons > .MuiButton-root:hover{
+    border: 1px solid #5f6368;
 }
 .search__buttons > .MuiButton-outlinedPrimary {
     outline-color:  #757575;
@@ -100,6 +107,10 @@
 
 .search__language p{
     color: #BDC1C6;
+    font-size: 14px;
+}
+.search__language span:hover{
+    text-decoration: underline;
 }
 .search__language span{
     color: #8Ab4F8;
@@ -115,14 +126,13 @@
     color: #e8eaed;   
 }
 @media (max-width:768px) {
-    .footer__links{
-flex-direction: column;
-width: 100%;
-    }
-    .footer__leftLinks{
-        width: 100%;
-
-    }
+.search img{
+    margin-top: 40px;
+    width: 200px;
+}
+.search__input{
+    width: 30vw;
+}
 }
 
 svg{

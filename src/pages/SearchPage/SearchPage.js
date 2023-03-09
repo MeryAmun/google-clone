@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react';
-import { Search } from '../../components';
+import { Search, SearchPageHeader } from '../../components';
 import { Link } from 'react-router-dom'
 import AppsIcon from '@mui/icons-material/Apps';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { google } from '../../assets';
 import { Button } from '@mui/material';
-import { gmailUrl } from '../../utils';
+import { gmailUrl, searchApiKey } from '../../utils';
 import Tooltip from '@mui/material/Tooltip';
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from '@mui/icons-material/Close';
@@ -14,12 +14,13 @@ import './searchPage.css';
 import { useStateDataValue } from '../../context/DataLayerContext';
 import * as actionType from '../../constants/actionTypes'
 
+
 const SearchPage = () => {
   const [{ term }, dispatch] = useStateDataValue();
   const [input, setInput] = useState(term === null ? '' : term);
   const [showClose, setShowClose] = useState(false);
   const [showSearch, setShowSearch] = useState(true);
-
+  const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate();
 
 
@@ -29,7 +30,7 @@ const SearchPage = () => {
       type:actionType.SET_SEARCH_TERM,
       term:input
     })
-    setInput("");
+   // setInput("");
     navigate("/search");
   };
 const clearInput = () => {
@@ -38,11 +39,16 @@ const clearInput = () => {
 
 }
   const handleChange = (e) => {
-  console.log(input)
      setInput(e.target.value)
      setShowClose(true)
      setShowSearch(false)
   }
+useEffect(() => {
+ fetch(`https://www.googleapis.com/customsearch/v1?key=${searchApiKey}&cx=017576662512468239146:omuauf_lfve&q=${term}`).then((response) => response.json())
+ .then(data => {
+  setSearchResults(data)
+ })
+}, [term])
 
  useEffect(() => {
   if(term?.length !== 0){
@@ -50,17 +56,16 @@ const clearInput = () => {
   }
  }, [term])
  
-console.log(term)
-
-
+console.log(searchResults)
 
   return (
     <div className='searchPage'>
      <div className="searchPage__header">
    <div className="searchPage__headerLeft">
  <Link to='/'>
- <Tooltip title='Go to Google Home' followCursor>
- <img src={google} alt="" />
+ <Tooltip title="Happy International Women's Day 2023" followCursor>
+ <img src='https://www.google.com/logos/doodles/2023/international-womens-day-2023-6753651837109578.2-6752733080608196-cst.png' alt="" />
+ {/* <img src={google} alt="" /> */}
  </Tooltip>
  </Link>
  
@@ -105,7 +110,11 @@ console.log(term)
     <Button variant="contained"><Link to={gmailUrl}>Sign in</Link></Button>
    </div>
      </div>
-      
+     <SearchPageHeader searchTerm={term}/>
+     <hr />
+      <div className="searchPage__results">
+        {term}
+      </div>
     </div>
   )
 }

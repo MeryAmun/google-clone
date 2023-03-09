@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./search.css";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from '@mui/material/Button'
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useNavigate } from "react-router-dom";
 import { google } from "../../assets";
 import CloseIcon from '@mui/icons-material/Close';
@@ -27,7 +26,7 @@ const [{}, dispatch] = useStateDataValue();
     navigate("/search");
   };
 const clearInput = () => {
-  // setInput("")
+   setInput("")
   setShowClose(false)
 }
   const handleChange = (e) => {
@@ -35,11 +34,19 @@ const clearInput = () => {
      setInput(e.target.value)
      setShowClose(true)
   }
+
+  useEffect(() => {
+    if(input?.length !== 0){
+      setShowClose(true)
+    }
+   }, [input])
   return (
     <div className="search">
        {
         !hideButtons ? (
-      <img src={google} alt="" />
+          <Tooltip title="International Women's Day 2023" followCursor>
+      <img src='https://www.google.com/logos/doodles/2023/international-womens-day-2023-6753651837109578-6752733080608198-cst.png' alt="" />
+      </Tooltip>
         ) : (
           <img src={google} alt="" className="search__buttonsHidden"/>
         )
@@ -73,9 +80,9 @@ const clearInput = () => {
         !hideButtons ? (
           <div className="search__inputFooter">
             <div className="search__buttons">
-        <Button variant="outlined" type='submit'>Google Search</Button>
+        <Button variant="none" type='submit'>Google Search</Button>
        
-        <Button variant="outlined">I'm Feeling Lucky</Button>
+        <Button variant="none">I'm Feeling Lucky</Button>
       </div>
       <div className="search__language">
         <p>Google offered in: <span>English</span></p>
