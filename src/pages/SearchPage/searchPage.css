@@ -137,4 +137,40 @@ svg{
  
 }
 
+@media (max-width:768px) {
+   .searchPage__header{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+   }
+   .search__pageSearch{
+    width: 100%;
+   }
+   .searchPage__headerLeft img{
+    margin: 0;
+    width: 100%;
+    
+}
+   .searchPage__headerLeft{
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+
+    
+}
+.searchPage__input{
+    width: 180px;
+    padding: 0;
+    height: 35px;
+    margin-right: 0px;
+}
+   .searchPage__headerRight{
+    align-self: flex-end;
+}
+svg{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+}
 .Mui-focusVisible{}
