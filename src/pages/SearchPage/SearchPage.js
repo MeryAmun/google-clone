@@ -5,7 +5,7 @@ import AppsIcon from '@mui/icons-material/Apps';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { google } from '../../assets';
 import { Button } from '@mui/material';
-import { gmailUrl, searchApiKey } from '../../utils';
+
 import Tooltip from '@mui/material/Tooltip';
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from '@mui/icons-material/Close';
@@ -14,15 +14,18 @@ import './searchPage.css';
 import { useStateDataValue } from '../../context/DataLayerContext';
 import * as actionType from '../../constants/actionTypes'
 import useGoogleSearch from '../../customHook/useGoogleSearch';
+import { gmailUrl } from '../../utils';
 
-
+const API_KEY ='AIzaSyDkjVQjWq0XbX2da4DbJUt3vhIaUtC3odU'
+const CONTEXT_KEY ='f1f56731d63df4512'
 const SearchPage = () => {
   const [{ term }, dispatch] = useStateDataValue();
-  const [input, setInput] = useState(term === null ? '' : term);
+  const [input, setInput] = useState('');
   const [showClose, setShowClose] = useState(false);
   const [showSearch, setShowSearch] = useState(true);
-  const {searchResults} = useGoogleSearch(term)
+  const searchResults = useGoogleSearch(term)
   const navigate = useNavigate();
+  // const [searchResults, setSearchResults] = useState([])
 
 
   const handleSubmit = (e) => {
@@ -44,18 +47,21 @@ const clearInput = () => {
      setShowClose(true)
      setShowSearch(false)
   }
-useEffect(() => {
- fetch(`https://www.googleapis.com/customsearch/v1?key=${searchApiKey}&cx=017576662512468239146:omuauf_lfve&q=${term}`).then((response) => response.json())
- .then(data => {
-  setSearchResults(data)
- })
-}, [term])
+// useEffect(() => {
+//  fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${term}`).then((response) => response.json())
+//  .then(data => {
+//   setSearchResults(data)
+//  })
+//  .catch((err) => {
+//   console.log(err)
+//  })
+// }, [term])
 
- useEffect(() => {
-  if(term?.length !== 0){
-    setShowClose(true)
-  }
- }, [term])
+//  useEffect(() => {
+//   if(term?.length !== 0){
+//     setShowClose(true)
+//   }
+//  }, [term])
  
 console.log(searchResults)
 

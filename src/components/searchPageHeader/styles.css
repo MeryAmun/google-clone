@@ -103,3 +103,10 @@ margin-right: 10px;
    
 
 }
+
+@media (max-width:768px) {
+    .searchPageHeader__link{
+        width: auto;
+        margin: 0;
+    }
+    }

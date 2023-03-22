@@ -8,8 +8,9 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const SearchPageHeader = ({ searchTerm }) => {
   const [active, setActive] = useState("All");
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };

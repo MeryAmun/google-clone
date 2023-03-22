@@ -52,7 +52,7 @@ const clearInput = () => {
         )
 }
         <form onSubmit={handleSubmit} className="search__input">
-        <SearchIcon className="search__inputIcon" />
+        <SearchIcon className="search__inputIcon" onClick={handleSubmit}/>
         <Tooltip title="Search" followCursor>
           <input
             type="text"
