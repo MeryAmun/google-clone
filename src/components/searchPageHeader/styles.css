@@ -1,30 +1,31 @@
-.searchPage__header{
-width: 100%;
-display: flex;
-justify-content: flex-end;
-/* border-bottom: 1px solid #5f6368; */
-/* border-bottom: 1px solid lightgray; */
+.searchPage__header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
-.searchPageHeader__headerLinks{
+.searchPageHeader__headerLinks {
     position: sticky;
-z-index: 100;
-top: 0;
-align-items: flex-start;
+    z-index: 100;
+    top: 0;
+    align-items: flex-start;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    margin: 0 11rem; 
+    align-items: center;
+    margin: 0 11rem;
     height: 50px;
     padding: 30px;
 }
-.searchPageHeader__linksLeft{
-display: flex;
-justify-content: center;
-align-items: center;
+
+.searchPageHeader__linksLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
-.searchPageHeader__textActive:active{
+
+.searchPageHeader__textActive:active {
     color: #8AB4F8;
 
 }
@@ -33,14 +34,16 @@ align-items: center;
     color: #8AB4F8;
     border-bottom: 4px solid #8AB4F8;
 }
-.searchPageHeader__link{
+
+.searchPageHeader__link {
     width: auto;
     margin: 0 10px;
 }
+
 /* .test{
   fo: 800;
 } */
-.searchPageHeader__link{
+.searchPageHeader__link {
     height: 45px;
     display: flex;
     justify-content: center;
@@ -48,61 +51,68 @@ align-items: center;
     padding-bottom: 10px;
     color: #969BA1;
     margin: 0 5px;
-    
-  
+
+
 }
-.searchPageHeader__link > svg{
+
+.searchPageHeader__link>svg {
     width: 17px;
     height: 17px;
     margin-right: 6px;
-color: inherit;
-   
+    color: inherit;
+
 }
+
 /* svg{
     color: #969BA1;
 } */
-.searchPageHeader__link a{
- color: inherit;
- margin-right: 5px;
- text-decoration: none;
+.searchPageHeader__link a {
+    color: inherit;
+    margin-right: 5px;
+    text-decoration: none;
 }
-.searchPageHeader__link a:active{
- color: #8AB4F8;
+
+.searchPageHeader__link a:active {
+    color: #8AB4F8;
 
 }
 
-.searchPageHeader__moreMenu{
+.searchPageHeader__moreMenu {
     width: 118px;
     background: #202124;
 }
-.searchPageHeader__moreMenu{ 
-     background: #202124;
-    
+
+.searchPageHeader__moreMenu {
+    background: #202124;
+
 }
+
 /* .MuiMenu-paper{ 
     border: 1px solid red;
     background: #0d3fd3;
     
 } */
-.searchPageHeader__moreMenu .MuiButton-root { 
+.searchPageHeader__moreMenu .MuiButton-root {
     color: #969BA1;
     text-transform: none;
-    
-}
-
-.searchPageHeader__moreMenuItem{
- margin: 0;
- padding: 0;
- background: #202124;
 
 }
-.searchPageHeader__moreMenuItem svg{
+
+.searchPageHeader__moreMenuItem {
+    margin: 0;
+    padding: 0;
+    background: #202124;
+
+}
+
+.searchPageHeader__moreMenuItem svg {
     width: 17px;
     height: 17px;
     color: #969BA1;
-margin-right: 10px;
+    margin-right: 10px;
 }
-.searchPageHeader__moreMenuItem a{
+
+.searchPageHeader__moreMenuItem a {
     color: #969BA1;
     display: flex;
     justify-content: space-between;
@@ -111,11 +121,11 @@ margin-right: 10px;
     font-size: 14px;
     margin: 0;
     padding: 0;
-   
+
 
 }
 
-.search__buttons > .MuiButton-root{
+.search__buttons>.MuiButton-root {
     background-color: #303134;
     color: #969BA1;
     border: 1px solid #303134;
@@ -128,30 +138,32 @@ margin-right: 10px;
     background: fixed;
 
 }
-.search__buttons > .MuiButton-root:hover{
+
+.search__buttons>.MuiButton-root:hover {
     border: 1px solid #5f6368;
 }
-.search__buttons > .MuiButton-outlinedPrimary {
-    outline-color:  #757575;
+
+.search__buttons>.MuiButton-outlinedPrimary {
+    outline-color: #757575;
 }
 
-.searchPageHeader__headerLinksRight_safeSearch{
+.searchPageHeader__headerLinksRight_safeSearch {
     color: #969BA1;
     font-size: 14px;
     text-decoration: none;
-  width: 300px;
-  margin-bottom: 5px;
-  align-self: flex-end;
+    width: 300px;
+    margin-bottom: 5px;
+    align-self: flex-end;
 }
 
 @media (max-width:768px) {
-    .searchPageHeader__link{
+    .searchPageHeader__link {
         width: auto;
         margin: 0;
     }
-    
-.searchPageHeader__headerLinks{
-    margin: 10px; 
-   
-}
+
+    .searchPageHeader__headerLinks {
+        margin: 10px;
+
     }
+}

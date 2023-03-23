@@ -46,7 +46,7 @@ const SearchPage = () => {
   };
 
   // console.log(responseData);
-  console.log(showSearch)
+  console.log(showSearch);
 
   return (
     <div className="searchPage">
@@ -59,7 +59,6 @@ const SearchPage = () => {
                 src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png"
                 alt=""
               />
-              
             </Tooltip>
           </Link>
 
@@ -167,7 +166,7 @@ const SearchPage = () => {
           </p>
         )}
 
-        {searchResults?.items?.map((item,index) => (
+        {searchResults?.items?.map((item, index) => (
           <div className="searchPage__result" key={index}>
             <div className="searchPage__resultItemHead">
               {item?.pagemap?.cse_image?.length > 0 &&
