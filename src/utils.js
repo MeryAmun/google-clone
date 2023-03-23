@@ -2,7 +2,7 @@ export const gmailUrl ="https://accounts.google.com/v3/signin/identifier?dsh=S-8
 
 export const API_KEY ='AIzaSyCUsjF7LTCUtdlgVzN7zHF-ewE8Th_jvhc'
 
-const url = 'https://cse.google.com/cse/create/new'
+// const url = 'https://cse.google.com/cse/create/new'
 
 /**<script async src="https://cse.google.com/cse.js?cx=f1f56731d63df4512">
 </script>

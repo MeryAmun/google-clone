@@ -1,9 +1,8 @@
-import React,{useState,useEffect} from 'react';
-import { Search, SearchPageHeader } from '../../components';
+import React,{useState} from 'react';
+import {  SearchPageHeader } from '../../components';
 import { Link } from 'react-router-dom'
 import AppsIcon from '@mui/icons-material/Apps';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import { google } from '../../assets';
 import { Button } from '@mui/material';
 
 import Tooltip from '@mui/material/Tooltip';
@@ -15,15 +14,16 @@ import { useStateDataValue } from '../../context/DataLayerContext';
 import * as actionType from '../../constants/actionTypes'
 import useGoogleSearch from '../../customHook/useGoogleSearch';
 import { gmailUrl } from '../../utils';
+import { responseData } from '../../components/response';
 
-const API_KEY ='AIzaSyDkjVQjWq0XbX2da4DbJUt3vhIaUtC3odU'
-const CONTEXT_KEY ='f1f56731d63df4512'
+
 const SearchPage = () => {
   const [{ term }, dispatch] = useStateDataValue();
   const [input, setInput] = useState('');
   const [showClose, setShowClose] = useState(false);
   const [showSearch, setShowSearch] = useState(true);
-  const searchResults = useGoogleSearch(term)
+  //LIVE API CALL
+  //const searchResults = useGoogleSearch(term)
   const navigate = useNavigate();
   // const [searchResults, setSearchResults] = useState([])
 
@@ -47,31 +47,17 @@ const clearInput = () => {
      setShowClose(true)
      setShowSearch(false)
   }
-// useEffect(() => {
-//  fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${term}`).then((response) => response.json())
-//  .then(data => {
-//   setSearchResults(data)
-//  })
-//  .catch((err) => {
-//   console.log(err)
-//  })
-// }, [term])
 
-//  useEffect(() => {
-//   if(term?.length !== 0){
-//     setShowClose(true)
-//   }
-//  }, [term])
- 
-console.log(searchResults)
+console.log(responseData)
 
   return (
     <div className='searchPage'>
      <div className="searchPage__header">
    <div className="searchPage__headerLeft">
  <Link to='/'>
- <Tooltip title="Happy International Women's Day 2023" followCursor>
- <img src='https://www.google.com/logos/doodles/2023/international-womens-day-2023-6753651837109578.2-6752733080608196-cst.png' alt="" />
+ <Tooltip title="Go to Google Home" followCursor>
+ {/* <img src='https://www.google.com/logos/doodles/2023/international-womens-day-2023-6753651837109578.2-6752733080608196-cst.png' alt="" />*/}
+ <img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png' alt="" /> 
  {/* <img src={google} alt="" /> */}
  </Tooltip>
  </Link>
@@ -119,9 +105,13 @@ console.log(searchResults)
      </div>
      <SearchPageHeader searchTerm={term}/>
      <hr />
-      <div className="searchPage__results">
-        {term}
-      </div>
+      {
+        term && (
+        <div className="searchPage__results">
+      
+        </div>
+        )
+      }
     </div>
   )
 }

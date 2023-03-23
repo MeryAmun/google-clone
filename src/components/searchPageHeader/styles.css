@@ -1,13 +1,21 @@
 .searchPageHeader{
 width: 100%;
-margin: 20px 10px 0 10px;
+
+
+/* border-bottom: 1px solid lightgray; */
 }
 
 .searchPageHeader__headerLinks{
-    width: 100%;
+    position: sticky;
+z-index: 100;
+top: 0;
+align-items: flex-start;
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center; 
+    margin: 0; 
+    height: 50px;
+    padding: 30px;
 }
 .searchPageHeader__linksLeft{
 display: flex;
@@ -102,6 +110,33 @@ margin-right: 10px;
     padding: 0;
    
 
+}
+
+.search__buttons > .MuiButton-root{
+    background-color: #303134;
+    color: #969BA1;
+    border: 1px solid #303134;
+    font-size: 14px;
+    height: 36px;
+    min-width: 54px;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    text-transform: none;
+    background: fixed;
+
+}
+.search__buttons > .MuiButton-root:hover{
+    border: 1px solid #5f6368;
+}
+.search__buttons > .MuiButton-outlinedPrimary {
+    outline-color:  #757575;
+}
+
+.searchPageHeader__headerLinksRight_safeSearch{
+    color: #969BA1;
+    font-size: 14px;
+    text-decoration: none;
+  width: 250px;
 }
 
 @media (max-width:768px) {

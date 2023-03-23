@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Avatar ,Button} from '@mui/material';
 import { Link } from 'react-router-dom';
 import AppsIcon from '@mui/icons-material/Apps';
 import './home.css';
-import { google } from '../../assets';
 import {Search} from '../../components';
 import Tooltip from '@mui/material/Tooltip';
 import { gmailUrl } from '../../utils';
 
 const Home = () => {
-  const [user, setUser] = useState(null);
+  const user = null;
 
   
   return (
