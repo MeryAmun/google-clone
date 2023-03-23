@@ -20,7 +20,8 @@ const SearchPageHeader = ({ searchTerm }) => {
 
 
   return (
-      <div className="searchPageHeader__headerLinks">
+    <div className="searchPage__header">
+        <div className="searchPageHeader__headerLinks">
         <div className="searchPageHeader__linksLeft">
           <div
             className={`searchPageHeader__link ${
@@ -299,8 +300,9 @@ const SearchPageHeader = ({ searchTerm }) => {
         <div className="searchPageHeader__headerLinksRight search__buttons">
         <Button variant="none" type='submit'>Tools</Button>
         </div>
-          <Link to='#' className='searchPageHeader__headerLinksRight_safeSearch'>SafeSearch on</Link>
       </div>
+      <Link to='#' className='searchPageHeader__headerLinksRight_safeSearch'>SafeSearch on</Link>
+    </div>
   );
 };
 

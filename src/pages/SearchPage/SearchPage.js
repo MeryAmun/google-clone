@@ -105,13 +105,30 @@ console.log(responseData)
      </div>
      <SearchPageHeader searchTerm={term}/>
      <hr />
-      {
-        term && (
-        <div className="searchPage__results">
       
+        <div className="searchPage__results">
+        {
+        true && (
+      <p className="searchPage__resultCount">
+        {responseData?.searchInformation.formattedTotalResults} results ({responseData?.searchInformation.formattedSearchTime} seconds) for {term}
+      </p>
+         )}
+    
+  
+      {
+        responseData?.items.map((item) => (
+          <div className="searchPage__result" key={item.cacheId}>
+          <a href={item.link}>{item.displayLink}</a>
+          <a href={item.link} className="searchPage__resultTitle">
+            <h2>{item.title}</h2>
+          </a>
+          <p className="searchPage__resultSnippet">
+            {item.snippet}
+          </p>
         </div>
-        )
+        ))
       }
+        </div>
     </div>
   )
 }

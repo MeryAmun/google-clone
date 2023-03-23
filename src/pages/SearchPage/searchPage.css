@@ -1,6 +1,6 @@
 .searchPage{
     height: 83vh;
-    padding: 20px 0;
+    padding: 20px 0px;
     overflow-x: hidden;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .searchPage__headerLeft{
-    width: 60%;
+    width: 70%;
     height: 50px;
     display: flex;
     align-items: center; 
@@ -36,6 +36,7 @@ align-self: center;
     color: #ffff;  
 }
 .search__pageSearch{
+    width: 70%;
     margin-top: 40px;
     margin-left: 2rem;
 }
@@ -59,7 +60,7 @@ align-self: center;
     border-radius: 29px;
     background-color: #ffff;
     margin-top: -2.3rem;
-    max-width: 560px;
+ 
     min-width: 300px;
     background-color: #292a2d;
    border: 1px solid #5f6368;
@@ -125,6 +126,7 @@ svg{
 .searchPage__headerRight > .MuiButton-root{
     background-color: #8AB4F8;
     text-transform: none;
+    margin-right: 10px;
 }
 .searchPage__headerRight > .MuiButton-root:hover{
     background-color: #8AB4F8;
@@ -136,6 +138,51 @@ svg{
     border: 1px solid #5f6368;
     width: 100%;
  
+}
+
+.searchPage__results{
+padding: 0px 20px;
+}
+.searchPage__resultCount{
+    font-size: 14px;
+font-weight: 400;
+line-height: 43px;
+color: rgb(154, 160, 166);
+padding-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    Font-weight: 400;
+    line-height: 22px;
+  color: rgb(218, 220, 224)
+}
+.searchPage__result{
+margin: 10px;
+}
+.searchPage__resultSnippet{
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    Font-weight: 400;
+    line-height: 22px;
+  color: rgb(189, 193, 198);
+}
+.searchPage__resultTitle > h2{
+    font-family: arial, sans-serif;
+  width: fit-content;
+    font-size: 20px;
+    Font-weight: 400;
+    line-height: 26px;
+  color: rgb(138, 180, 248);
+}
+.searchPage__resultTitle > h2:hover{
+    border-bottom: 2px solid rgb(138, 180, 248);
+    
+}
+.searchPage__resultSnippet{
+
 }
 
 @media (max-width:768px) {
