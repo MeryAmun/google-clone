@@ -10,7 +10,8 @@ import * as actionType from '../../constants/actionTypes';
 import Tooltip from '@mui/material/Tooltip';
 
 const Search = ({ hideButtons = false }) => {
-const [ dispatch] = useStateDataValue();
+  // eslint-disable-next-line
+const [{}, dispatch] = useStateDataValue();
   const [input, setInput] = useState("");
   const [showClose, setShowClose] = useState(false)
   const navigate = useNavigate();

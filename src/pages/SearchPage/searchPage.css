@@ -141,14 +141,17 @@ svg{
 }
 
 .searchPage__results{
-padding: 0px 20px;
+    max-width: 640px;
+    margin: 0px 220px 100px;
+    padding: 0;
 }
 .searchPage__resultCount{
     font-size: 14px;
 font-weight: 400;
-line-height: 43px;
+line-height: 33px;
 color: rgb(154, 160, 166);
-padding-left: 10px;
+padding: 0;
+margin: 0;
 }
 
 a{
@@ -160,7 +163,7 @@ a{
   color: rgb(218, 220, 224)
 }
 .searchPage__result{
-margin: 10px;
+margin: 20px 0 ;
 }
 .searchPage__resultSnippet{
     font-family: arial, sans-serif;
@@ -181,11 +184,16 @@ margin: 10px;
     border-bottom: 2px solid rgb(138, 180, 248);
     
 }
-.searchPage__resultSnippet{
 
+.searchPage__resultImage{
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 
-@media (max-width:768px) {
+@media (max-width:568px) {
    .searchPage__header{
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -219,6 +227,11 @@ svg{
     height: 80px;
     margin-left: 10px;
     cursor: pointer;
+}
+.searchPage__results{
+    padding: 20px;
+    width: 100%;
+    margin: 10px;
 }
 }
 .Mui-focusVisible{}

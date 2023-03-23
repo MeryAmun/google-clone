@@ -149,4 +149,9 @@ margin-right: 10px;
         width: auto;
         margin: 0;
     }
+    
+.searchPageHeader__headerLinks{
+    margin: 10px; 
+   
+}
     }
